@@ -44,10 +44,3 @@ changelog:
     exclude:
       - '^docs:'
       - '^chore'
-# .goreleaser.yaml
-github_urls:
-  api: https://github.com/KL-Infrastructure/api/v3/
-  upload: https://github.com/KL-Infrastructure/api/uploads/
-  download: https://github.com/KL-Infrastructure
-  # set to true if you use a self-signed certificate
-  skip_tls_verify: false
