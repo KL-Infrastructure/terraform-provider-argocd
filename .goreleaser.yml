@@ -8,13 +8,13 @@ builds:
     ldflags:
       - '-s -w -X main.version={{.Version}} -X main.commit={{.Commit}}'
     targets:
-      - darwin_arm64
-      - darwin_amd64
+      # - darwin_arm64
+      # - darwin_amd64
       - linux_amd64
-      - linux_arm
-      - linux_arm64
-      - windows_amd64
-      - windows_arm
+      # - linux_arm
+      # - linux_arm64
+      # - windows_amd64
+      # - windows_arm
     binary: '{{ .ProjectName }}_v{{ .Version }}'
 archives:
   - format: zip
@@ -44,3 +44,10 @@ changelog:
     exclude:
       - '^docs:'
       - '^chore'
+# .goreleaser.yaml
+github_urls:
+  api: https://github.com/KL-Infrastructure/api/v3/
+  upload: https://github.com/KL-Infrastructure/api/uploads/
+  download: https://github.com/KL-Infrastructure
+  # set to true if you use a self-signed certificate
+  skip_tls_verify: false
